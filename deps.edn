@@ -2,7 +2,10 @@
  :deps {org.clojure/clojure {:mvn/version "1.11.1"}
         org.clojure/clojurescript {:mvn/version "1.11.60"}
         com.bhauman/figwheel-main {:mvn/version "0.2.18"}
-        quil/quil {:mvn/version "4.0.0-SNAPSHOT"}}
+        quil/quil {:mvn/version "4.3-SNAPSHOT"}
+        generateme/fastmath {:mvn/version "2.2.1"
+                             :exclusions [com.github.haifengl/smile-mkl
+                                          org.bytedeco/openblas]}}
  :aliases {:fig {:main-opts ["-m" "figwheel.main"]}
            :build {:main-opts ["-m" "cljs.main" "-O" "advanced" "-c" "mrhota.alphabetsuperset.e"]}
            :repl {:main-opts ["-m" "cljs.main" "-c" "mrhota.alphabetsuperset.e" "-r"]}}}
